@@ -1,16 +1,65 @@
-# React + Vite
+# Germen Latin Market - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Frontend de la aplicación web **Germen Latin Market**, desarrollada con React y Vite como parte del proyecto final Fullstack.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Germen Latin Market es una tienda online orientada a la venta de productos latinoamericanos y africanos, con productos enviados desde España a Turquía y Europa.
 
-## React Compiler
+La aplicación permite:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Visualizar productos disponibles.
+- Consultar productos por categoría.
+- Ver el detalle de cada producto.
+- Añadir productos al carrito.
+- Gestionar cantidades y eliminar productos.
+- Realizar pedidos.
+- Iniciar sesión con diferentes roles.
+- Acceder a un panel de administración.
+- Crear, editar y eliminar productos.
+- Gestionar pedidos desde el área administrativa.
 
-## Expanding the Oxlint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- React Router
+- API REST con Node.js y Express
+- MongoDB Atlas
+
+## Arquitectura
+
+El frontend consume una API REST independiente desarrollada con Node.js y Express.
+La URL de la API se configura mediante la variable de entorno:
+
+```env
+VITE_API_URL=
+
+#Instalación
+npm install
+
+Ejecución en desarrollo
+npm run dev
+
+Compilación para producción
+npm run build
+
+Estructura principal
+src/
+├── components/
+├── context/
+├── data/
+├── hooks/
+├── layouts/
+├── pages/
+├── services/
+└── App.jsx
+
+Despliegue
+El frontend está preparado para desplegarse en Vercel y conectarse al backend mediante la variable VITE_API_URL.
+Proyecto académico
+Proyecto final Fullstack desarrollado como aplicación de comercio electrónico completa, integrando frontend, backend y base de datos.
+Germen Latin Market
+Sabores que te llevan a casa.
