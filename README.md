@@ -57,6 +57,34 @@ src/
 ├── services/
 └── App.jsx
 
+
+## Diagrama de arquitectura
+
+```mermaid
+flowchart TD
+    A[Usuario] --> B[Frontend React + Vite]
+
+    B --> C[React Router]
+    B --> D[Context API]
+    B --> E[Servicios HTTP]
+
+    E --> F[API REST Express / Node.js]
+
+    F --> G[Middleware JWT]
+    F --> H[Controladores]
+
+    H --> I[Mongoose]
+    I --> J[(MongoDB Atlas)]
+
+    G --> K[Rol Customer]
+    G --> L[Rol Admin]
+
+    L --> M[CRUD de productos]
+    L --> N[Gestión de pedidos]
+
+    K --> O[Carrito y Checkout]
+    O --> N
+    
 Despliegue
 El frontend está preparado para desplegarse en Vercel y conectarse al backend mediante la variable VITE_API_URL.
 Proyecto académico
